@@ -1,5 +1,3 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { useState } from 'react'
 
@@ -8,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>{num}</h1>
+      <div style="width: 100px; height: 100px;"></div>
       <button onClick={() => setNum(num + 1)}>Click me</button>
     </>
   )
