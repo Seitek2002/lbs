@@ -1,12 +1,11 @@
 import React, { useMemo } from 'react'
-import { Layout, Space, Anchor, Button, Row, Col } from 'antd'
+import { Layout, Space, Anchor, Button, Row, Col, Typography } from 'antd'
 import Logo from '../components/icons/Logo'
+import Checkbox from '../components/icons/checkbox'
 const { Header, Footer, Sider, Content } = Layout
-
-const headerStyle = {
-  backgroundColor: 'transparent',
-  padding: '28px 0',
-}
+const { Title, Text, Link } = Typography;
+import heroImg from "../assets/img/hero-img.png"
+import whyImg from "../assets/img/why-img.png"
 
 const anchors = [
   {
@@ -36,8 +35,8 @@ const options = anchors.map((item, i) => {
 
 const Home = () => {
   return (
-    <Layout style={{backgroundColor: 'transparent'}}>
-      <Header className="header" style={headerStyle}>
+    <Layout style={{ backgroundColor: 'transparent' }}>
+      <Header className="header">
         <div className="container">
           <div className="header__content">
             <Logo />
@@ -49,28 +48,56 @@ const Home = () => {
           </div>
         </div>
       </Header>
-      <Content style={{backgroundColor: 'transparent'}}>
+      <Content style={{ backgroundColor: 'transparent' }}>
         <div className="container">
-        <Row className='hero'>
+          <Row className="hero">
             <Col className="gutter-row" span={12}>
-                <h1>
-                    Грузоперевозки с высоким качеством
-                </h1>
-                <p>
-                    Новое направление логистики с передовой платформой как для грузоотправителей, так и для перевозчиков
-                </p>
-                <Button>Начать</Button>
-                <div>
-
-                </div>
+              <h1>Грузоперевозки с высоким качеством</h1>
+              <p>
+                Новое направление логистики с передовой платформой как для грузоотправителей, так и для перевозчиков
+              </p>
+              <Button>Начать</Button>
+              <div>
+                <ul>
+                  <li>
+                    <Checkbox />
+                    Оперативность
+                  </li>
+                  <li>
+                    <Checkbox />
+                    Лучшие цены
+                  </li>
+                  <li>
+                    <Checkbox />
+                    Более 5 000 довольных клиентов
+                  </li>
+                </ul>
+              </div>
             </Col>
             <Col className="gutter-row" span={12}>
-                
+              <img src={heroImg} alt="" />
             </Col>
-        </Row>
+            <div className="red-box"></div>
+          </Row>
+        </div>
+        <div className="container">
+          <Row className='why'>
+            <Title level={2}>
+              Почему LBS?
+            </Title>
+            <Text>
+              Благодаря инновационным технологиям и специальной команде экспертов в своей области LSB — это не просто логистическая и транспортная сеть в мире. Это платформа и сервис, которые помогают грузоотправителям и перевозчикам контролировать свои грузы и достигать поставленных целей.
+            </Text>
+            <Link href="https://ant.design">
+              Подробнее
+            </Link>
+            <div>
+            <img src={whyImg} alt="" />
+            </div>
+          </Row>
         </div>
       </Content>
-      <Footer style={{backgroundColor: 'transparent'}}></Footer>
+      <Footer style={{ backgroundColor: 'transparent' }}></Footer>
     </Layout>
   )
 }
