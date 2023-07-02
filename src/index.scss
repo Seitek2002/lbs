@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1225px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ant-anchor-wrapper-horizontal::before {
+        border-bottom: none;
+    }
+
+    .ant-anchor-wrapper-horizontal .ant-anchor{
+        gap: 40px;
+    }
+
+    .ant-btn-default {
+        border: 1px solid #D6001C;
+        color: #D6001C;
+        padding: 14px 28px;
+        height: auto;
+        border-radius: 30px;
+    }
+
+    .ant-btn-default + .ant-btn-default {
+        border: 1px solid #D6001C;
+        background: #D6001C;
+
+        span {
+            color: #fff;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+}
