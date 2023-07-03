@@ -3,100 +3,25 @@ import { Layout, Space, Anchor, Button, Row, Col, Typography } from "antd";
 import Logo from "../components/icons/Logo";
 import Check from "../components/icons/Check";
 import Arrow from "../components/icons/Arrow";
-import Checkbox from "../components/icons/Checkbox";
 import Facebook from "../components/icons/Facebook";
 import Twiter from "../components/icons/Twiter";
 import Instagram from "../components/icons/Instagram";
 import In from "../components/icons/In";
 import Youtube from "../components/icons/Youtube";
-const { Header, Footer, Sider, Content } = Layout;
+const { Footer, Sider, Content } = Layout;
 const { Title, Text, Link } = Typography;
-import heroImg from "../assets/img/hero-img.png";
 import whyImg from "../assets/img/why-img.png";
 import sendImg from "../assets/img/send-img.png";
-
-const anchors = [
-    {
-        href: "#part-1",
-        title: "Главная",
-    },
-    {
-        href: "#part-2",
-        title: "О нас",
-    },
-    {
-        href: "#part-3",
-        title: "Отзывы",
-    },
-    {
-        href: "#part-4",
-        title: "Помощь",
-    },
-];
-
-const options = anchors.map((item, i) => {
-    return {
-        ...item,
-        key: i,
-    };
-});
+import Header from "../components/Home/Header";
+import Hero from "../components/Home/Hero";
 
 const Home = () => {
     return (
         <Layout style={{ backgroundColor: "transparent" }}>
-            <Header className="header">
-                <div className="container">
-                    <div className="header__content">
-                        <Logo />
-                        <nav>
-                            <Anchor direction="horizontal" items={options} />
-                            <Button>Зарегистрироваться</Button>
-                            <Button>Войти</Button>
-                        </nav>
-                        <div className="burger">
-                            <div className="burger-menu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div className="burger-content">1234</div>
-                        </div>
-                    </div>
-                </div>
-            </Header>
+            <Header />
             <Content style={{ backgroundColor: "transparent" }}>
                 <div className="container">
-                    <Row className="hero">
-                        <Col className="gutter-row" span={12}>
-                            <h1>Грузоперевозки с высоким качеством</h1>
-                            <p>
-                                Новое направление логистики с передовой
-                                платформой как для грузоотправителей, так и для
-                                перевозчиков
-                            </p>
-                            <Button>Начать</Button>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <Checkbox />
-                                        Оперативность
-                                    </li>
-                                    <li>
-                                        <Checkbox />
-                                        Лучшие цены
-                                    </li>
-                                    <li>
-                                        <Checkbox />
-                                        Более 5 000 довольных клиентов
-                                    </li>
-                                </ul>
-                            </div>
-                        </Col>
-                        <Col className="gutter-row" span={12}>
-                            <img src={heroImg} alt="" />
-                        </Col>
-                        <div className="red-box"></div>
-                    </Row>
+                    <Hero />
                 </div>
 
                 <div className="container">
