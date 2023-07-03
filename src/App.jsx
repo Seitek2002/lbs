@@ -1,13 +1,19 @@
-import './App.css'
-import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import About from './pages/About';
+import Home from './pages/Home';
+import Login from './pages/Auth/Login';
+import Register from './pages/Auth/Register';
 
 function App() {
-  const [num, setNum] = useState(0)
 
   return (
     <>
-      <div style="width: 100px; height: 100px;"></div>
-      <button onClick={() => setNum(num + 1)}>Click me</button>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </>
   )
 }
