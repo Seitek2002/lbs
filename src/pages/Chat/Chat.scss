@@ -1,0 +1,212 @@
+.contacts_block {
+    padding: 12px 0;
+    width: 30%;
+
+    .search_contact {
+        border-radius: 32px;
+        border: 1px solid #E6E6E6;
+        background: #FFF;
+        color: #C6C6C6;
+        font-size: 16px;
+        padding: 10px 14px;
+        margin-bottom: 11px;
+    }
+
+    .contact {
+        padding: 18px 0;
+        display: flex;
+
+        align-items: center;
+
+        &.online {
+            .contact_image::before {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border: 3px solid white;
+                bottom: 0;
+                right: 0;
+                border-radius: 100%;
+                background: green;
+            }
+        }
+
+        &_info {
+            margin-left: 10px;
+        }
+
+        &_image {
+            position: relative;
+            border-radius: 100%;
+            display: flex;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            background: red;
+            color: #FFF;
+            font-size: 24px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+        }
+
+        &_message {
+            color: var(--gray, #67646A);
+            font-size: 16px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &_name {
+            color: var(--black, #222324);
+            font-size: 16px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    .message_info {
+        margin-left: auto;
+    }
+
+    .message_time {
+        color: var(--gray, #67646A);
+        text-align: center;
+        font-size: 14px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .message_amount {
+        color: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border-radius: 100%;
+        width: 22px;
+        height: 22px;
+        background: var(--green-500, #38A169);
+    }
+}
+
+.chat {
+    width: 62%;
+
+    &_header {
+        text-align: center;
+        border-radius: 0px 16px 0px 0px;
+        background: #FFF;
+        box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+
+        .contact_name {
+            color: var(--text-gray-dark, #2C2C2E);
+            font-size: 16px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 18px;
+        }
+
+        .was_online {
+            color: var(--text-gray, #666668);
+            font-size: 14px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+        }
+    }
+
+    .message_area {
+        .message {
+
+            &_date {
+                text-align: center;
+                margin: 15px 0;
+            }
+
+            &_time {
+                position: relative;
+                bottom: -4px;
+                color: var(--white-white, #FFF);
+                font-size: 13px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                &.their{
+                    color: var(--black, #222324);
+                }
+            }
+
+            .our_message {
+                display: inline-block;
+                background: #D6001C;
+                width: none;
+                color: var(--white-white, #FFF);
+                font-size: 18px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                padding: 8px;
+                border-radius: 6px;
+
+            }
+
+            .our_message_block {
+                text-align: end;
+                padding: 0 10px 10px;
+
+                &.first {
+                    background: url('./BubbleTipOur.png') top right no-repeat;
+                }
+            }
+
+            .their_message_block {
+                text-align: start;
+                padding: 0 10px 10px;
+
+                &.first {
+                    background: url('./BubbleTipTheir.png') top left no-repeat;
+                }
+            }
+
+            .their_message {
+                padding: 8px;
+                color: var(--black, #222324);
+                display: inline-block;
+                background: #D6001C;
+                width: none;
+                font-size: 18px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                padding: 8px 8px 4px;
+                border-radius: 6px;
+                background: var(--gray-gray-1, #F2F2F7);
+            }
+
+            &.first {}
+        }
+    }
+
+}
