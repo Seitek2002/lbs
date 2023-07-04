@@ -1,17 +1,22 @@
-import React from 'react'
-import { Layout, Space, Anchor, Button, Row, Col, Typography } from 'antd'
+import React from "react";
+import { Layout, Space, Anchor, Button, Row, Col, Typography } from "antd";
 import Checkbox from "../icons/Checkbox";
 import heroImg from "../../assets/img/hero-img.png";
 
 const Hero = () => {
   return (
-    <Row className="hero">
+    <Row id="hero" className="hero">
       <Col className="gutter-row" span={12}>
-        <h1>Грузоперевозки с высоким качеством</h1>
-        <p>Новое направление логистики с передовой платформой как для грузоотправителей, так и для перевозчиков</p>
-        <Button>Начать</Button>
+        <h1>
+          Грузоперевозки <br /> с высоким качеством
+        </h1>
+        <p>
+          Новое направление логистики с передовой <br /> платформой как для
+          грузоотправителей, так <br /> и для перевозчиков
+        </p>
+        <Button className="hero-btn">Начать</Button>
         <div>
-          <ul>
+          <ul id="hero-ul" >
             <li>
               <Checkbox />
               Оперативность
@@ -22,17 +27,17 @@ const Hero = () => {
             </li>
             <li>
               <Checkbox />
-              Более 5 000 довольных клиентов
+              Сатисфактинг
             </li>
           </ul>
         </div>
       </Col>
       <Col className="gutter-row" span={12}>
-        <img src={heroImg} alt="" />
+        <img className="hero-img" id="hero-img" src={heroImg} alt="" />
       </Col>
       <div className="red-box"></div>
     </Row>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

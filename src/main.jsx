@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './index.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter future={{ v7_startTransition: true }}>
+  <BrowserRouter>
     <App />
   </BrowserRouter>
 )
