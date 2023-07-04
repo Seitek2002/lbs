@@ -3,6 +3,8 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
+import Profile from './pages/Profile/Profile';
+import Orders from './pages/Orders/Orders';
 
 function App() {
 
@@ -13,6 +15,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/orders" element={<Orders/>}/>
       </Routes>
     </>
   )
