@@ -7,6 +7,7 @@ import Profile from './pages/Profile/Profile';
 import Orders from './pages/Orders/Orders';
 import CompanyProfile from './pages/Profile/CompanyProfile';
 import Location from './pages/Location/Location';
+import FindCargo from './pages/FindCargo/FindCargo';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/company" element={<CompanyProfile/>}/>
         <Route path="/orders" element={<Orders/>}/>
         <Route path="/location" element={<Location/>}/>
+        <Route path="/find" element={<FindCargo/>}/>
       </Routes>
     </>
   )
