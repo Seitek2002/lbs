@@ -54,7 +54,6 @@ const DrawMap = () => {
 
   ws.onmessage = async (e) => {
     const data = await JSON.parse(e.data)
-    console.log(data)
   }
 
   const handleCheck = (x,y) => {
