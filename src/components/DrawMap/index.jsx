@@ -50,19 +50,19 @@ const DrawMap = () => {
     setBounds(bounds)
   }
 
-  const ws = new WebSocket('ws://176.126.164.218:8000/ws/socket-server/chat/1')
+  // const ws = new WebSocket('ws://176.126.164.218:8000/ws/socket-server/chat/1')
 
-  ws.onmessage = async (e) => {
-    const data = await JSON.parse(e.data)
-  }
+  // ws.onmessage = async (e) => {
+  //   const data = await JSON.parse(e.data)
+  // }
 
   const handleCheck = (x,y) => {
-    ws.send(
-      JSON.stringify({
-        x,
-        y
-      })
-    )
+    // ws.send(
+    //   JSON.stringify({
+    //     x,
+    //     y
+    //   })
+    // )
     dispatch(
       routerActions.fetchRoute({
         original: [42.86476777774923, 74.55397209694085],
