@@ -26,6 +26,23 @@ const FindCargoCard = () => {
     margin: "0",
   };
 
+  const TypographyBtn = {
+    color: "#D6001C",
+    textAlign: "center",
+    fontSize: "16px",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "600",
+    lineHeight: "26px",
+    letterSpacing: "-0.36px",
+    width: "100%",
+    height: "50px",
+    borderRadius: "30px",
+    border: "1px solid #D6001C",
+    background: "#FFF",
+    cursor: "pointer",
+  };
+
   return (
     <Col span={11}>
       <Card
@@ -70,6 +87,7 @@ const FindCargoCard = () => {
             ]}
           />
         </div>
+        <button style={TypographyBtn}>Подробнее</button>
       </Card>
     </Col>
   );
