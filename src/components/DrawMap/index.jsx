@@ -66,7 +66,7 @@ const DrawMap = () => {
     dispatch(
       routerActions.fetchRoute({
         original: [42.86476777774923, 74.55397209694085],
-        destination: [42.86476777774923, 74.55397209694085],
+        destination: [x, y],
       })
     )
   }
@@ -84,7 +84,7 @@ const DrawMap = () => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
 
-        // handleCheck(latitude, longitude)
+        handleCheck(latitude, longitude)
       },
       function (error) {
         console.log(error);
