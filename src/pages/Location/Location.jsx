@@ -11,7 +11,6 @@ const Location = () => {
   return (
     <>
       <HeroHeader />
-        <button style={{ marginTop: "100px" }} onClick={() => handleCheck()}>Click</button>
       <div className="container container-styled">
         <Aside />
         <div className="location-block">
