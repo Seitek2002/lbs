@@ -21,6 +21,7 @@ const Profile = () => {
     lineHeight: "28px",
     letterSpacing: "-0.4px",
   };
+
   const TypographyDesc = {
     color: "#67646A",
     fontSize: "18px",
