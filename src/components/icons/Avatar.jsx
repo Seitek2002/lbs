@@ -20,7 +20,7 @@ const Avatar = () => {
         r="5"
         fill="#38A169"
         stroke="white"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );
