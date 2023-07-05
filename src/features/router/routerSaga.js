@@ -5,6 +5,7 @@ import { routerActions } from './routerSlice';
 function* fetchRoute(action) {
   try {
     const response = yield call(routerApi.getRoute, action.payload);
+    console.log(response);
     yield put(routerActions.fetchRouteSuccess(response));
   } catch (error) {
     yield put(routerActions.fetchRouteFailed(error));
