@@ -10,6 +10,7 @@ import Location from './pages/Location/Location';
 import FindCargo from './pages/FindCargo/FindCargo';
 import DriverMap from './pages/DriverMap/DriverMap';
 import TrackingTruck from './pages/TrackingTruck/TrackingTruck';
+import UserProfile from './pages/Profile/UserProfile';
 
 
 function App() {
@@ -21,16 +22,17 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile/>}/>
-        <Route path="/company" element={<CompanyProfile/>}/>
-        <Route path="/orders" element={<Orders/>}/>
-        <Route path="/location" element={<Location/>}/>
-        <Route path="/find" element={<FindCargo/>}/>
-        <Route path="/GPS" element={<DriverMap/>}/>
-        <Route path="/tracking" element={<TrackingTruck/>}/>
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/company" element={<CompanyProfile />} />
+        <Route path="/user" element={<UserProfile />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/find" element={<FindCargo />} />
+        <Route path="/GPS" element={<DriverMap />} />
+        <Route path="/tracking" element={<TrackingTruck />} />
       </Routes>
     </>
-  )
+  );
 }
 
 export default App

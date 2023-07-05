@@ -12,12 +12,12 @@
   gap: 27px;
 }
 .right{
+  width: 40%;
   //display: flex;
   //gap: 150px;
   &__content{
     display: flex;
-    flex-direction: column;
-    width: 200%;
+    justify-content: space-between;
   }
 }
 
@@ -28,6 +28,25 @@
   width: 75%;
 }
 
+.UserProfileContent__btn{
+  width: 100%;
+    height: 46px;
+    color: #D6001C;
+    background: none;
+    text-align: center;
+    font-size: 10px !important;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+    border-radius: 40px !important;
+    border: 1px solid #D6001C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
 @media (max-width: 390px) {
   .col-mobile{
     flex: none;
@@ -50,9 +69,8 @@
     }
   }
   .drProfile__row{
-    width: 100%;
     display: flex;
-    flex-direction: row;
+    width: 100%;
   }
   .drProfile__col{
     max-width: 100%;
