@@ -3,7 +3,7 @@ import Photo from './PhotoAvatar.png'
 
 const PhotoAvatar = () => {
   return (
-    <img src={Photo} alt="" />
+    <img className="img" src={Photo} alt="" />
   );
 }
 

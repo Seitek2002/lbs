@@ -32,7 +32,7 @@ const HeroHeader = () => {
   });
 
   return (
-    <Layout.Header className="header">
+    <Layout.Header className="header" style={{position: "fixed"}}>
       <div className="container">
         <div className="header__content">
           <Logo />
