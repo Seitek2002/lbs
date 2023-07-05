@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Row } from "antd";
+import './Aside.scss'
 
 const Typography = {
   fontSize: "20px",
@@ -18,10 +19,9 @@ const Aside = () => {
   };
 
   return (
-    <Row>
+    <Row className="row-aside">
       <div
         className="aside"
-        style={{ display: "flex", flexDirection: "column", gap: "24px" }}
       >
         <a
           onClick={() => handleClick(0)}

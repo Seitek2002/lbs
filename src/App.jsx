@@ -6,6 +6,8 @@ import Register from './pages/Auth/Register';
 import Profile from './pages/Profile/Profile';
 import Orders from './pages/Orders/Orders';
 import CompanyProfile from './pages/Profile/CompanyProfile';
+import Location from './pages/Location/Location';
+
 
 function App() {
 
@@ -19,6 +21,7 @@ function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/company" element={<CompanyProfile/>}/>
         <Route path="/orders" element={<Orders/>}/>
+        <Route path="/location" element={<Location/>}/>
       </Routes>
     </>
   )
