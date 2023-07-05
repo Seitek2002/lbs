@@ -9,6 +9,7 @@ import CompanyProfile from './pages/Profile/CompanyProfile';
 import Location from './pages/Location/Location';
 import FindCargo from './pages/FindCargo/FindCargo';
 import DriverMap from './pages/DriverMap/DriverMap';
+import TrackingTruck from './pages/TrackingTruck/TrackingTruck';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/location" element={<Location/>}/>
         <Route path="/find" element={<FindCargo/>}/>
         <Route path="/GPS" element={<DriverMap/>}/>
+        <Route path="/tracking" element={<TrackingTruck/>}/>
       </Routes>
     </>
   )
