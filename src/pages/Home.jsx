@@ -1,350 +1,68 @@
-import React, { useMemo } from "react";
-import { Layout, Space, Anchor, Button, Row, Col, Typography } from "antd";
-import Logo from "../components/icons/Logo";
-import Check from "../components/icons/Check";
-import Arrow from "../components/icons/Arrow";
-import Facebook from "../components/icons/Facebook";
-import Twiter from "../components/icons/Twiter";
-import Instagram from "../components/icons/Instagram";
-import In from "../components/icons/In";
-import Youtube from "../components/icons/Youtube";
-const { Footer, Sider, Content } = Layout;
-const { Title, Text, Link } = Typography;
-import whyImg from "../assets/img/why-img.png";
-import sendImg from "../assets/img/send-img.png";
-import Header from "../components/Home/Header";
-import Hero from "../components/Home/Hero";
+import React, { useEffect } from 'react'
+import { Layout, Space, Anchor, Button, Row, Col, Typography } from 'antd'
+import Header from '../components/Home/Header'
+import Hero from '../components/Home/Hero'
+import Why from '../components/Home/Why'
+import Result from '../components/Home/Result'
+import Ship from '../components/Home/Ship'
+import Send from '../components/Home/Send'
+import Footer from '../components/Home/Footer'
+
+const { Content } = Layout
+const { Title, Text, Link } = Typography
 
 const Home = () => {
-    return (
-        <Layout style={{ backgroundColor: "transparent" }}>
-            <Header />
-            <Content style={{ backgroundColor: "transparent" }}>
-                <div className="container">
-                    <Hero />
-                </div>
+  // useEffect(async () => {
+  //   if (navigator.geolocation) {
+  //     const options = {
+  //       enableHighAccuracy: true, // Запрос на более высокую точность
+  //       timeout: 10000, // Максимальное время ожидания
+  //       maximumAge: 0, // Не использовать кэшированное местоположение
+  //     }
 
-                <div className="container">
-                    <Row className="why">
-                        <Title level={2}>Почему LBS?</Title>
-                        <Text>
-                            Благодаря инновационным технологиям и специальной
-                            команде экспертов в своей области LSB — это не
-                            просто логистическая и транспортная сеть в мире. Это
-                            платформа и сервис, которые помогают
-                            грузоотправителям и перевозчикам контролировать свои
-                            грузы и достигать поставленных целей.
-                        </Text>
-                        <Link href="https://ant.design">Подробнее</Link>
-                        <div>
-                            <img src={whyImg} alt="" />
-                        </div>
-                    </Row>
-                </div>
+  //     const watchId = await navigator.geolocation.watchPosition(
+  //       function (position) {
+  //         // Обработка обновленного местоположения
+  //         const latitude = position.coords.latitude
+  //         const longitude = position.coords.longitude
 
-                <Row className="results">
-                    <div className="container">
-                        <Title level={2}>Наши результаты в цифрах</Title>
-                        <Row className="results-wrapper">
-                            <div className="results-item">
-                                <Text>10</Text>
-                                <p className="results-description">
-                                    Лет опыта работы
-                                </p>
-                            </div>
-                            <div className="results-line"></div>
-                            <div className="results-item">
-                                <Text>200 000</Text>
-                                <p className="results-description">
-                                    Активных пользователей
-                                </p>
-                            </div>
-                            <div className="results-line"></div>
-                            <div className="results-item">
-                                <Text>96%</Text>
-                                <p className="results-description">
-                                    Успешных заказов
-                                </p>
-                            </div>
-                        </Row>
-                    </div>
-                </Row>
+  //         console.log('Широта:', latitude)
+  //         console.log('Долгота:', longitude)
+  //       },
+  //       function (error) {
+  //         console.log(error)
+  //       },
+  //       options
+  //     )
+  //   } else {
+  //     // Геолокация не поддерживается
+  //     console.log('Геолокация не поддерживается вашим браузером')
+  //   }
+  // }, [])
 
-                <div className="container">
-                    <Row className="ship">
-                        <Title level={2}>Отправляйте и перевозите с LBS</Title>
-                        <Text>
-                            LBS открывает лучшие возможности и варианты для
-                            грузоотправителей и перевозчиков по перемещению
-                            товаров
-                        </Text>
-                        <Row className="ship-wrapper">
-                            <div className="ship-block">
-                                <div className="ship-info">
-                                    <Title level={4}>Безопасно</Title>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Отслеживание груза в реальном времени
-                                    </div>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Безопасные платежи
-                                    </div>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Поиск лучших участников при помощи
-                                        системы рейтингов
-                                    </div>
-                                    <Link href="#">
-                                        Побробнее <Arrow />
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="ship-block">
-                                <div className="ship-info">
-                                    <Title level={4}>Безопасно</Title>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Отслеживание груза в реальном времени
-                                    </div>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Безопасные платежи
-                                    </div>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Поиск лучших участников при помощи
-                                        системы рейтингов
-                                    </div>
-                                    <Link href="#">
-                                        Побробнее <Arrow />
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="ship-block">
-                                <div className="ship-info">
-                                    <Title level={4}>Безопасно</Title>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Отслеживание груза в реальном времени
-                                    </div>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Безопасные платежи
-                                    </div>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Поиск лучших участников при помощи
-                                        системы рейтингов
-                                    </div>
-                                    <Link href="#">
-                                        Побробнее <Arrow />
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="ship-block">
-                                <div className="ship-info">
-                                    <Title level={4}>Безопасно</Title>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Отслеживание груза в реальном времени
-                                    </div>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Безопасные платежи
-                                    </div>
-                                    <div className="ship-item">
-                                        <Check />
-                                        Поиск лучших участников при помощи
-                                        системы рейтингов
-                                    </div>
-                                    <Link href="#">
-                                        Побробнее <Arrow />
-                                    </Link>
-                                </div>
-                            </div>
-                        </Row>
-                    </Row>
-                </div>
+  return (
+    <Layout style={{ backgroundColor: 'transparent' }}>
+      <Header />
+      <Content style={{ backgroundColor: 'transparent' }}>
+        <div className="container">
+          <Hero />
+        </div>
 
-                <Row className="send">
-                    <Col className="send-left" span={12}>
-                        <div>
-                            <Title level={2}>
-                                Отправляйте и перевозите с LBS
-                            </Title>
-                            <Text>
-                                LBS открывает лучшие возможности и варианты для
-                                грузоотправителей и перевозчиков по перемещению
-                                товаров
-                            </Text>
-                            <button>Начать</button>
-                        </div>
-                    </Col>
-                    <Col className="send-right" span={12}>
-                        <img src={sendImg} alt="img" />
-                    </Col>
-                </Row>
-            </Content>
-            <Footer
-                className="container footer"
-                style={{ backgroundColor: "transparent" }}
-            >
-                <div className="footer-wrapper">
-                    <Row className="footer-info">
-                        <Logo />
-                        <Text>
-                            Lorem ipsum dolor sit amet consectetur adipiscing
-                            elit aliquam mauris sed ma
-                        </Text>
-                        <div className="footer-cocial">
-                            <a href="#" target="_blank">
-                                <Facebook />
-                            </a>
-                            <a href="#" target="_blank">
-                                <Twiter />
-                            </a>
-                            <a href="#" target="_blank">
-                                <Instagram />
-                            </a>
-                            <a href="#" target="_blank">
-                                <In />
-                            </a>
-                            <a href="#" target="_blank">
-                                <Youtube />
-                            </a>
-                        </div>
-                    </Row>
-                    <ul className="footer-list">
-                        <li className="footer-item">
-                            {" "}
-                            <Title level={3}>Product </Title>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Features
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Pricing
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Case studies
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Reviews
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Updates
-                            </a>
-                        </li>
-                    </ul>
-                    <ul className="footer-list">
-                        <li className="footer-item">
-                            {" "}
-                            <Title level={3}>Product </Title>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Features
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Pricing
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Case studies
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Reviews
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Updates
-                            </a>
-                        </li>
-                    </ul>
-                    <ul className="footer-list">
-                        <li className="footer-item">
-                            {" "}
-                            <Title level={3}>Product </Title>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Features
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Pricing
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Case studies
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Reviews
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Updates
-                            </a>
-                        </li>
-                    </ul>
-                    <ul className="footer-list">
-                        <li className="footer-item">
-                            {" "}
-                            <Title level={3}>Product </Title>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Features
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Pricing
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Case studies
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Reviews
-                            </a>
-                        </li>
-                        <li className="footer-item">
-                            <a href="#" className="footer-link">
-                                Updates
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="footer-line"></div>
-                <p className="footer-description">Copyright © 2023 BRIX Templates | All Rights Reserved | Terms and Conditions | Privacy Policy</p>
-            </Footer>
-        </Layout>
-    );
-};
+        <div className="container">
+          <Why />
+        </div>
 
-export default Home;
+        <Result />
+
+        <div className="container">
+          <Ship />
+        </div>
+
+        <Send />
+      </Content>
+      <Footer />
+    </Layout>
+  )
+}
+
+export default Home

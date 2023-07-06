@@ -9,7 +9,7 @@ const DotOrder = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="19" cy="19.2812" r="19" fill="#FEE5E5" fill-opacity="0.61" />
+      <circle cx="19" cy="19.2812" r="19" fill="#FEE5E5" fillOpacity="0.61" />
       <circle cx="19" cy="19.2812" r="7" fill="#D6001C" />
     </svg>
   );

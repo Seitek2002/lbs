@@ -2,14 +2,14 @@ import React from 'react'
 
 const Checkbox = () => {
   return (
-    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
+    <svg className='checkbox' width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path className='checkbox'
         fillRule="evenodd"
         clipRule="evenodd"
         d="M17.1221 2.72656H7.12207C4.36065 2.72656 2.12207 4.96514 2.12207 7.72656V17.7266C2.12207 20.488 4.36065 22.7266 7.12207 22.7266H17.1221C19.8835 22.7266 22.1221 20.488 22.1221 17.7266V7.72656C22.1221 4.96514 19.8835 2.72656 17.1221 2.72656ZM7.12207 4.72656H17.1221C18.7789 4.72656 20.1221 6.06971 20.1221 7.72656V17.7266C20.1221 19.3834 18.7789 20.7266 17.1221 20.7266H7.12207C5.46522 20.7266 4.12207 19.3834 4.12207 17.7266V7.72656C4.12207 6.06971 5.46522 4.72656 7.12207 4.72656Z"
         fill="#D6001C"
       />
-      <g opacity="0.5">
+      <g className='checkbox' opacity="0.5">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
