@@ -1,9 +1,10 @@
 import Logo from '../../components/icons/Logo';
+import { Link } from 'react-router-dom'
 import React, { useState } from 'react'
 import track from "./image.png";
 
 const Login = () => {
-  const [user, setUser] = useState({ firstName: '', typeUser: '', phoneNumber: '', login: '' })
+  const [user, setUser] = useState({ nameame: '', mail: '', phoneNumber: '', login: '' })
   const submitHandler = (e) => {
     const { name, value } = e.target;
     setUser((prevFormData) => ({ ...prevFormData, [name]: value }));
@@ -53,12 +54,12 @@ const Login = () => {
       <form style={formStyle} action="submit" className='card_form' onSubmit={handlerChange}>
 
         <label>
-          <input className='card_text' style={inputStyle} placeholder='Введите почту' type="text" name='mail' value={user.nameame} onChange={submitHandler} /></label>
+          <input className='card_text' style={inputStyle} placeholder='Введите почту'  type="text" name='mail' value={user.nameame} onChange={submitHandler} /></label>
         <label>
-          <input className='card_text' style={inputStyle} placeholder='Введите пароль' type="text" name='password' value={user.mail} onChange={submitHandler} /></label>
+          <input className='card_text' required style={inputStyle} placeholder='Введите пароль' type="text" name='password' value={user.mail} onChange={submitHandler} /></label>
       </form>
-      <div className='card_text' style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}><p><input type="checkbox" />Запомнить меня </p><p><a href="#" style={{ color: 'black', textDecoration: 'none' }}>Забыли пароль?</a></p></div>
-      <button style={btn}>Зарегистрироваться</button>
+      <div className='card_text' required style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}><p><input type="checkbox" />Запомнить меня </p><p><a href="#" style={{ color: 'black', textDecoration: 'none' }}>Забыли пароль?</a></p></div>
+      <Link to="/location" className='register-btn' style={btn}>Зарегистрироваться</Link>
       <hr style={{ background: '#E7E5EA', width: '100%' }} />
       <p className='card_text'>У вас нет аккоунта? <b><a href="/register" style={{ color: 'black', textDecoration: 'none' }}>Зарегистрироваться</a></b></p>
     </div>

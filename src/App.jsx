@@ -6,7 +6,8 @@ import Register from './pages/Auth/Register';
 import Profile from './pages/Profile/Profile';
 import Orders from './pages/Orders/Orders';
 import CompanyProfile from './pages/Profile/CompanyProfile';
-import Location from './pages/Location/Location';
+import Location from './pages/Location/Location';   
+import Chat from './pages/Chat/Chat';   
 
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         <Route path="/company" element={<CompanyProfile/>}/>
         <Route path="/orders" element={<Orders/>}/>
         <Route path="/location" element={<Location/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/chat" element={<Chat/>}/>
       </Routes>
     </>
   )

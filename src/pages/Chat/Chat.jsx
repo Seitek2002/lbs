@@ -50,45 +50,11 @@ const Chat = () => {
     return (
         <>
             <HeroHeader />
-            <div className="container" style={{ marginTop: "50px" }}>
+            <div className="container" style={{ margin: "140px auto" }}>
                 <Row style={{ display: "flex", justifyContent: "space-between" }}>
                     <Aside />
                     <Row style={{ justifyContent: "space-between", gap: "8%", width: '80%' }}>
-                        <div className="contacts_block ">
-                            <input type="text" className="search_contact" placeholder='Поиск' />
-                            <div className="contact online">
-                                <div className="contact_image">TF</div>
-                                <div className="contact_info">
-                                    <div className="contact_name">Team Fly</div>
-                                    <div className="contact_message">hello!</div>
-                                </div>
-                                <div className="message_info">
-                                    <div className="message_time">12:22</div>
-                                    <div className="message_amount">3</div>
-                                </div>
-                            </div><div className="contact online">
-                                <div className="contact_image">TF</div>
-                                <div className="contact_info">
-                                    <div className="contact_name">Team Fly</div>
-                                    <div className="contact_message">hello!</div>
-                                </div>
-                                <div className="message_info">
-                                    <div className="message_time">12:22</div>
-                                    <div className="message_amount">3</div>
-                                </div>
-                            </div>
-                            <div className="contact">
-                              <div className="contact_image">TF</div>
-                                <div className="contact_info">
-                                    <div className="contact_name">Team Fly</div>
-                                    <div className="contact_message">hello!</div>
-                                </div>
-                                <div className="message_info">
-                                    <div className="message_time">12:22</div>
-                                    <div className="message_amount">3</div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div className="chat">
                             <div className="chat_header">
                                 <p className="contact_name">Бермет</p>

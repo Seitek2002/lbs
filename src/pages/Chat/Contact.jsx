@@ -6,7 +6,7 @@ const Contact = () => {
         <div className="contact onlin">
             <div className="contact_image">TF</div>
             <div className="contact_info">
-                <div className="contact_name">Team Fly</div>
+                <div className="contact_name">Team Fly</div> 
                 <div className="contact_message">hello!</div>
             </div>
             <div className="message_info">

@@ -1,14 +1,19 @@
 import Check from '../../components/icons/Check';
 import Logo from '../../components/icons/Logo';
 import React, { useState } from 'react'
+import { Link, } from 'react-router-dom'
 import track from './image.png'
-import './auth.scss'
+import './auth.scss' 
 
 const Register = () => {
   const [user, setUser] = useState({ firstName: '', typeUser: '', phoneNumber: '', login: '' })
+  // const history = unstable_HistoryRouter();
+
+
   const submitHandler = (e) => {
     const { name, value } = e.target;
     setUser((prevFormData) => ({ ...prevFormData, [name]: value }));
+    // history.push("/register");
   }
   const handlerChange = (e) => {
     e.preventDefault()
@@ -40,17 +45,17 @@ const Register = () => {
     background: '#FFF'
     
   }
-  const btn = {
+  const btn = { 
     padding: '15px 0',
     width: '100%',
     color: '#FFF',
     borderRadius: '28px',
-    background: '#D6001C',
+    background: '#D6001C', 
   }
   
   return (
     <div className="bg">
-      <div style={cardStyle} className='card'>
+      <div style={cardStyle} className='card'> 
         <Logo />
         <h2 className='card_title'>Добро пожаловать</h2>
         <form style={formStyle} action="submit" className='card_form' onSubmit={handlerChange}>
@@ -65,9 +70,9 @@ const Register = () => {
             <input className='card_text' style={inputStyle} placeholder='Повторите пароль' type="password" name='password' onChange={submitHandler} /></label>
         </form>
         <p className='card_text'><input type="checkbox" />Я принимаю условия <a href="#">Пользовательского соглашения</a> </p>
-        <button style={btn}>Зарегистрироваться</button>
+        <Link className='register-btn' to="/location" style={btn}>Зарегистрироваться</Link>
         <hr style={{ background: '#E7E5EA', width: '100%' }} />
-        <p className='card_text'>У вас есть аккоунт? <b><a href="/login" style={{ color: 'black', textDecoration: 'none' }}>Войти</a></b></p>
+        <p className='card_text'>У вас есть аккоунт? <b><a href="#" style={{ color: 'black', textDecoration: 'none' }}>Войти</a></b></p>
       </div>
       <img src={track} className='image' alt="" />
     </div>

@@ -4,7 +4,7 @@ import Logo from "../icons/Logo.jsx";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const history = useNavigate();
+  const history = useNavigate(); 
   const anchors = [
     {
       href: "#part-1",
@@ -38,8 +38,8 @@ const Header = () => {
           <Logo />
           <nav>
             <Anchor direction="horizontal" items={options} />
-            <Button onClick={() => history('/location')}>Зарегистрироваться</Button>
-            <Button onClick={() => history('/location')}>Войти</Button>
+            <Button onClick={() => history('/register')}>Зарегистрироваться</Button>
+            <Button onClick={() => history('/login')}>Войти</Button>
           </nav>
           <div className="burger">
             <div className="burger-menu">

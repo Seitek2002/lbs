@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Row } from "antd";
+import { Row } from "antd";  
+import { Link } from 'react-router-dom'
 import './Aside.scss'
 
 const Typography = {
@@ -23,9 +24,9 @@ const Aside = () => {
       <div
         className="aside"
       >
-        <a
+        <Link to="/location"
           onClick={() => handleClick(0)}
-          href="#"
+          
           style={{
             ...Typography,
             color: activeLink === 0 ? "red" : "black",
@@ -33,21 +34,21 @@ const Aside = () => {
           className="HeroHeader__link"
         >
           Работа
-        </a>
-        <a
+        </Link>
+        <Link to="/profile"
           onClick={() => handleClick(1)}
           style={{
             ...Typography,
             color: activeLink === 1 ? "red" : "black",
           }}
-          href="#"
+          
           className="HeroHeader__link"
         >
           Профиль
-        </a>
-        <a
+        </Link>
+        <Link to="/orders"
           onClick={() => handleClick(2)}
-          href="#"
+          
           style={{
             ...Typography,
             color: activeLink === 2 ? "red" : "black",
@@ -55,21 +56,10 @@ const Aside = () => {
           className="HeroHeader__link"
         >
           Заказы
-        </a>
-        <a
-          onClick={() => handleClick(3)}
-          href="#"
-          style={{
-            ...Typography,
-            color: activeLink === 3 ? "red" : "black",
-          }}
-          className="HeroHeader__link"
-        >
-          Избранное
-        </a>
-        <a
+        </Link> 
+        <Link
           onClick={() => handleClick(4)}
-          href="#"
+          to="/chat"
           style={{
             ...Typography,
             color: activeLink === 4 ? "red" : "black",
@@ -77,7 +67,7 @@ const Aside = () => {
           className="HeroHeader__link"
         >
           Чат
-        </a>
+        </Link>
       </div>
     </Row>
   );

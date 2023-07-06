@@ -15,7 +15,7 @@ const DrawMap = () => {
 
   function MapEvents() {
     useMapEvent('click', e => {
-      console.log(e.latlng)
+      console.log(e.latlng) 
     })
     return null
   }
