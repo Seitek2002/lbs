@@ -26,7 +26,7 @@ const Register = () => {
     display: 'flex',
     flexDirection: 'column',
     gap: '16px',
-    
+    fontFamily: 'Montserrat'
   }
 
   const formStyle = {
@@ -50,7 +50,8 @@ const Register = () => {
     width: '100%',
     color: '#FFF',
     borderRadius: '28px',
-    background: '#D6001C', 
+    background: '#D6001C',
+    textDecoration: 'none'
   }
   
   return (
@@ -72,7 +73,7 @@ const Register = () => {
         <p className='card_text'><input type="checkbox" />Я принимаю условия <a href="#">Пользовательского соглашения</a> </p>
         <Link className='register-btn' to="/location" style={btn}>Зарегистрироваться</Link>
         <hr style={{ background: '#E7E5EA', width: '100%' }} />
-        <p className='card_text'>У вас есть аккоунт? <b><a href="#" style={{ color: 'black', textDecoration: 'none' }}>Войти</a></b></p>
+        <p className='card_text'>У вас есть аккаунт? <b><Link to="/login" style={{ color: 'black', textDecoration: 'none' }}>Войти</Link></b></p>
       </div>
       <img src={track} className='image' alt="" />
     </div>

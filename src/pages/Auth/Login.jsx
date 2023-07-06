@@ -21,6 +21,7 @@ const Login = () => {
     flexDirection: 'column',
     gap: '16px',
     maxWidth: '540px',
+    fontFamily: 'Montserrat'
   }
 
   const formStyle = {
@@ -44,6 +45,7 @@ const Login = () => {
     color: '#FFF',
     borderRadius: '28px',
     background: '#D6001C',
+    textDecoration: 'none'
   }
 
   return (
@@ -61,7 +63,7 @@ const Login = () => {
       <div className='card_text' required style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}><p><input type="checkbox" />Запомнить меня </p><p><a href="#" style={{ color: 'black', textDecoration: 'none' }}>Забыли пароль?</a></p></div>
       <Link to="/location" className='register-btn' style={btn}>Зарегистрироваться</Link>
       <hr style={{ background: '#E7E5EA', width: '100%' }} />
-      <p className='card_text'>У вас нет аккоунта? <b><a href="/register" style={{ color: 'black', textDecoration: 'none' }}>Зарегистрироваться</a></b></p>
+      <p className='card_text'>У вас нет аккоунта? <b><Link to="/register" style={{ color: 'black', textDecoration: 'none' }}>Зарегистрироваться</Link></b></p>
     </div>
     <img src={track} alt="" className="image" />
     </div>
