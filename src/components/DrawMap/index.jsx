@@ -19,7 +19,7 @@ const DrawMap = () => {
     })
     return null
   }
-
+  console.log(localStorage.getItem("toData").split(" ").reverse().join(","));
   // React.useEffect(() => {
   //   if (route) {
   //     const points = route.routes[0].geometry.coordinates.map(arr => [arr[1], arr[0]])
@@ -36,13 +36,15 @@ const DrawMap = () => {
   //   }
   // }, [route])
 
-  const ws = new WebSocket('ws://192.168.243.202:8000/ws/socket-server/chat/1')
+  const ws = new WebSocket('ws://192.168.1.3:8000/ws/socket-server/chat/1')
 
   const handleCheck = (x, y) => {
+
     ws.send(
       JSON.stringify({
+        token: localStorage.getItem("secretKey"),
         a: `${y},${x}`,
-        b: '74.55400601763478,42.8647615727689',
+        b: localStorage.getItem("toData").split(" ").reverse().join(",")
       })
     )
   }
@@ -57,7 +59,7 @@ const DrawMap = () => {
 
   ws.onmessage = async e => {
     const data = await JSON.parse(e.data)
-
+    console.log(data.result);
     const points = data.result.routes[0].geometry.coordinates.map(arr => [arr[1], arr[0]])
     setPoints(points)
     const originPoint = { lat: points[0][0], lng: points[0][1] }

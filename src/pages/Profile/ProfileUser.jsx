@@ -8,11 +8,13 @@ import Pen from '../../components/icons/Pen'
 import IdCard from '../../components/icons/IdCard'
 import Docs from '../../components/icons/Docs'
 
-const Profile = () => {
+const ProfileUser = () => {
   const [size, setSize] = useState('large') // default is 'middle'
   const [info, setInfo] = useState({});
 
   useEffect(() => {
+    console.log(localStorage.getItem('secretKey'))
+    console.log(JSON.parse(localStorage.getItem('user')))
     setInfo(JSON.parse(localStorage.getItem('user')))
   }, [])
 
@@ -88,42 +90,10 @@ const Profile = () => {
                   </div>
                   <div className="text-box">
                     <div style={TypographyTitle} className="text-box-title">
-                      Опыт вождения
-                    </div>
-                    <div style={TypographyDesc} className="text-box-content">
-                      13 лет
-                    </div>
-                  </div>
-                  <div className="text-box">
-                    <div style={TypographyTitle} className="text-box-title">
-                      Номер DOT
-                    </div>
-                    <div style={TypographyDesc} className="text-box-content">
-                      123456
-                    </div>
-                  </div>
-                  <div className="text-box">
-                    <div style={TypographyTitle} className="text-box-title">
                       Местоположение
                     </div>
                     <div style={TypographyDesc} className="text-box-content">
                       Чикаго, Иллинойс, США
-                    </div>
-                  </div>
-                  <div className="col-content">
-                    <div style={TypographyTitle} className="text-box-title">
-                      Водительские права
-                    </div>
-                    <div style={TypographyDesc} className="text-box-content">
-                      <IdCard />
-                    </div>
-                  </div>
-                  <div className="col-content">
-                    <div style={TypographyTitle} className="text-box-title">
-                      Водительские права
-                    </div>
-                    <div style={TypographyDesc} className="text-box-content">
-                      <Docs />
                     </div>
                   </div>
                 </Col>
@@ -154,4 +124,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default ProfileUser

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Row } from "antd";  
-import { Link } from 'react-router-dom'
+import { Row, Button } from "antd";  
 import './Aside.scss'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Typography = {
   fontSize: "20px",
@@ -14,9 +14,15 @@ const Typography = {
 
 const Aside = () => {
   const [activeLink, setActiveLink] = useState(null);
+  const navigate = useNavigate()
 
-  const handleClick = (index) => {
-    setActiveLink(index);
+  const handleClick = () => {
+    console.log(JSON.parse(localStorage.getItem("user")).type_user);
+    if(JSON.parse(localStorage.getItem("user")).type_user) {
+      navigate('/profile-driver')
+    } else {
+      navigate('/profile-user')
+    }
   };
 
   return (
@@ -35,17 +41,19 @@ const Aside = () => {
         >
           Работа
         </Link>
-        <Link to="/profile"
+        <Button
           onClick={() => handleClick(1)}
           style={{
             ...Typography,
             color: activeLink === 1 ? "red" : "black",
+            border: 'none',
+            padding: '0'
           }}
-          
+
           className="HeroHeader__link"
         >
           Профиль
-        </Link>
+        </Button>
         <Link to="/orders"
           onClick={() => handleClick(2)}
           
@@ -56,17 +64,6 @@ const Aside = () => {
           className="HeroHeader__link"
         >
           Заказы
-        </Link> 
-        <Link
-          onClick={() => handleClick(4)}
-          to="/chat"
-          style={{
-            ...Typography,
-            color: activeLink === 4 ? "red" : "black",
-          }}
-          className="HeroHeader__link"
-        >
-          Чат
         </Link>
       </div>
     </Row>

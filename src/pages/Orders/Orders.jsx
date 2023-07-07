@@ -80,6 +80,42 @@ const Orders = () => {
 
   const [isVisible, setIsVisible] = useState(false);
 
+  const items = [
+    {
+      id: 0,
+      fromCity: "Бишкек",
+      toCity: "Алматы",
+      price: "$900",
+      distance: "233 км",
+      fromStr: "пр. Манаса 38",
+      toStr: "ул. Абай 77",
+      fromData: [42.874851637187824, 74.58793238255039],
+      toData: [43.415522103173785, 76.97039285545371]
+    },
+    {
+      id: 1,
+      fromCity: "Бишкек",
+      toCity: "Бишкек-Парк",
+      price: "$100",
+      distance: "10 км",
+      fromStr: "ул Санжира 20",
+      toStr: "ул. Киевская 148",
+      fromData: [42.844028048589266, 74.64170704846893],
+      toData: [42.87501702391645, 74.59039703858598]
+    },
+    {
+      id: 2,
+      fromCity: "Мое местоположение",
+      toCity: "Бишкек",
+      price: "???",
+      distance: "???",
+      fromStr: "???",
+      toStr: "просп. Манаса 66",
+      fromData: [1,1],
+      toData: [42.845079250864885, 74.58724648804674]
+    },
+  ]
+
   return (
     <>
       <HeroHeader />
@@ -213,12 +249,11 @@ const Orders = () => {
               </div>
             </div>
             <Row gutter={16}>
-              <HeroCard />
-              <HeroCard />
-              <HeroCard />
-              <HeroCard />
-              <HeroCard />
-              <HeroCard />
+              {
+                items.map(item => (
+                  <HeroCard {...item} />
+                ))
+              }
             </Row>
           </div>
         </Row>
